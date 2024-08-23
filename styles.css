@@ -1,11 +1,45 @@
 :root {
-
+    --primary-dark: #88635b;
+    --primary-light: #e6d7c7;
+    --secondary: #00fda6;
 }
 
 html {
+    background-color: white;
+}
 
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 body {
+    --px: 0.5rem;
 
+    padding-top: 2rem;
+
+    padding-left: var(--px);
+    padding-right: var(--px);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.insta-link {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+}
+
+.insta-icon {
+    width: 100%;
+    height: 100%;
+    fill: var(--primary-dark);
 }
