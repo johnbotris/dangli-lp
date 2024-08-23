@@ -1,11 +1,32 @@
 :root {
-    --primary-dark: #88635b;
+    --primary-dark: #856359;
     --primary-light: #e6d7c7;
     --secondary: #00fda6;
 }
 
 html {
     background-color: white;
+    font-family: "Josefin Sans", sans-serif;
+
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--primary-dark);
+}
+
+@media screen and (min-width: 320px) {
+    html {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    html {
+        font-size: 22px;
+    }
+}
+
+p:not(:last-child) {
+    margin-bottom: 1rem;
 }
 
 img {
@@ -14,15 +35,9 @@ img {
 }
 
 body {
-    --px: 0.5rem;
-
-    padding-top: 2rem;
-
-    padding-left: var(--px);
-    padding-right: var(--px);
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 5rem;
 }
 
 .section {
@@ -32,14 +47,55 @@ body {
     justify-content: center;
 }
 
-.insta-link {
-    display: block;
-    width: 4rem;
-    height: 4rem;
+header img {
+    object-fit: contain;
+    max-width: 100%
 }
 
-.insta-icon {
-    width: 100%;
-    height: 100%;
+.description {
+    padding: 0 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.insta-link {
+
+}
+
+.insta-link {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: var(--primary-dark);
+}
+
+.insta-link__icon {
+    width: 2rem;
+    height: 2rem;
     fill: var(--primary-dark);
+}
+
+.gallery {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+@media screen and (min-width: 640px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        column-gap: 2rem;
+        padding: 0 6rem;
+    }
+}
+
+em {
+    font-weight: 500;
 }
