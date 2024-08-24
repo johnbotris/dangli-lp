@@ -91,7 +91,7 @@ header img {
     }
 
     .gallery img {
-        transition: transform 1000ms ease-out;
+        transition: transform 500ms ease-out;
     }
 
     .gallery img:hover {
